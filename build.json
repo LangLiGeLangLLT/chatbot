@@ -1,4 +1,4 @@
 {
-  "vite": true,
+  "vite": false,
   "plugins": []
 }

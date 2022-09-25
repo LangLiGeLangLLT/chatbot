@@ -1,7 +1,8 @@
-import Guide from '@/components/Guide';
+import React from 'react';
+import Chatbot from '@/components/Chatbot';
 
 const Home = () => {
-  return <Guide />;
+  return <Chatbot />;
 };
 
 export default Home;
