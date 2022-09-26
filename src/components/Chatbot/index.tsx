@@ -1,5 +1,6 @@
 import { Amplify } from 'aws-amplify';
 import { AmplifyChatbot } from '@aws-amplify/ui-react/legacy';
+import './index.module.css';
 
 Amplify.configure({
   Auth: {
@@ -18,7 +19,7 @@ Amplify.configure({
 });
 
 const Chatbot = () => {
-  return <AmplifyChatbot botName="help_desk_bot" botTitle="My ChatBot" welcomeMessage="Hello, how can I help you?" />;
+  return <AmplifyChatbot botName="help_desk_bot" botTitle="ChatBot" welcomeMessage="Hello, how can I help you?" />;
 };
 
 export default Chatbot;

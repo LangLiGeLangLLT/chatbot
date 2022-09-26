@@ -1,4 +1,10 @@
 {
   "vite": false,
-  "plugins": []
+  "plugins": [],
+  "postcssOptions": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
+  }
 }

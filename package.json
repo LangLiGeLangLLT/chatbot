@@ -5,6 +5,8 @@
   "dependencies": {
     "@aws-amplify/ui-react": "^3.5.4",
     "@fontsource/inter": "^4.5.12",
+    "@headlessui/react": "^1.7.2",
+    "@heroicons/react": "^2.0.11",
     "aws-amplify": "^4.3.36",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -15,10 +17,11 @@
     "@types/react-dom": "^17.0.2",
     "eslint": "^7.30.0",
     "ice.js": "^2.0.0",
-    "stylelint": "^13.7.2"
+    "stylelint": "^13.7.2",
+    "tailwindcss": "^3.1.8"
   },
   "scripts": {
-    "start": "icejs start",
+    "start": "icejs start --disable-open",
     "build": "icejs build",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
