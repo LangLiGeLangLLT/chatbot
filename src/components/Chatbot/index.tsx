@@ -4,13 +4,13 @@ import './index.module.css';
 
 Amplify.configure({
   Auth: {
-    identityPoolId: 'us-east-1:9dadb8b7-9203-4f2b-a16e-bfb747567fdc',
+    identityPoolId: 'us-east-1:634d3e22-890f-4082-85a0-f6c03df104ef',
     region: 'us-east-1',
   },
   Interactions: {
     bots: {
-      help_desk_bot: {
-        name: 'help_desk_bot',
+      financial_bot: {
+        name: 'financial_bot',
         alias: '$LATEST',
         region: 'us-east-1',
       },
@@ -19,7 +19,7 @@ Amplify.configure({
 });
 
 const Chatbot = () => {
-  return <AmplifyChatbot botName="help_desk_bot" botTitle="ChatBot" welcomeMessage="Hello, how can I help you?" />;
+  return <AmplifyChatbot botName="financial_bot" botTitle="ChatBot" welcomeMessage="Hello, how can I help you?" />;
 };
 
 export default Chatbot;
