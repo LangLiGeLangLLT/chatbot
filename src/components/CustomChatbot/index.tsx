@@ -128,16 +128,18 @@ function CustomChatbot() {
                         {item?.links?.length ? (
                           <div>
                             {map(item.links, (link: Link, i: number) => (
-                              <a
-                                className="text-blue-400 block"
-                                key={i}
-                                title={link.title}
-                                href={link.url}
-                                target="_blank"
-                                rel="noreferrer external"
-                              >
-                                {link.title}
-                              </a>
+                              <div>
+                                <a
+                                  className="text-blue-400"
+                                  key={i}
+                                  title={link.title}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noreferrer external"
+                                >
+                                  {link.title}
+                                </a>
+                              </div>
                             ))}
                           </div>
                         ) : null}
@@ -152,16 +154,18 @@ function CustomChatbot() {
                         {item?.links?.length ? (
                           <div>
                             {map(item.links, (link: Link, i: number) => (
-                              <a
-                                className="text-blue-400 block"
-                                key={i}
-                                title={link.title}
-                                href={link.url}
-                                target="_blank"
-                                rel="noreferrer external"
-                              >
-                                {link.title}
-                              </a>
+                              <div>
+                                <a
+                                  className="text-blue-400"
+                                  key={i}
+                                  title={link.title}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noreferrer external"
+                                >
+                                  {link.title}
+                                </a>
+                              </div>
                             ))}
                           </div>
                         ) : null}
