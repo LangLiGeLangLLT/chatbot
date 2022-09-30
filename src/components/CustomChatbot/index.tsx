@@ -128,10 +128,9 @@ function CustomChatbot() {
                         {item?.links?.length ? (
                           <div>
                             {map(item.links, (link: Link, i: number) => (
-                              <div>
+                              <div key={i}>
                                 <a
                                   className="text-blue-400"
-                                  key={i}
                                   title={link.title}
                                   href={link.url}
                                   target="_blank"
@@ -154,10 +153,9 @@ function CustomChatbot() {
                         {item?.links?.length ? (
                           <div>
                             {map(item.links, (link: Link, i: number) => (
-                              <div>
+                              <div key={i}>
                                 <a
                                   className="text-blue-400"
-                                  key={i}
                                   title={link.title}
                                   href={link.url}
                                   target="_blank"
