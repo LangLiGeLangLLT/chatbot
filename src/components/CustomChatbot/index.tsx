@@ -48,19 +48,23 @@ function CustomChatbot() {
   };
 
   const sendUserMsg = async (msg) => {
-    messages.push({
-      type: 'user',
-      text: msg,
-      time: Date.now(),
-    });
-    setMessages([...messages]);
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        type: 'user',
+        text: msg,
+        time: Date.now(),
+      },
+    ]);
     scrollToBottom(dialogRef.current);
 
     try {
       const response = await Interactions.send('financial_bot', msg);
       sendBotMsg(response.message);
       // eslint-disable-next-line no-empty
-    } catch (e) {}
+    } catch (e) {
+      sendBotMsg('Server error');
+    }
   };
 
   const sendBotMsg = (msg: string) => {
@@ -81,16 +85,18 @@ function CustomChatbot() {
         });
       }
     }
-    fulls.forEach(full => {
+    fulls.forEach((full) => {
       msg = msg.replace(full, '');
     });
-    messages.push({
-      type: 'bot',
-      text: msg,
-      links,
-      time: Date.now(),
-    });
-    setMessages([...messages]);
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        type: 'bot',
+        text: msg,
+        links,
+        time: Date.now(),
+      },
+    ]);
     scrollToBottom(dialogRef.current);
   };
 
